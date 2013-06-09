@@ -1,0 +1,22 @@
+{
+  "name": "We See In Every Direction Win Client",
+  "description": "We See In Every Direction, A Synchronized Web Browser",
+  "version": "0.5",
+  "main": "index.html",
+  "single-instance": true,
+  "node-main": "getEmbeds.js",
+  "window": {
+    "toolbar": false,
+    "width": 1000,
+    "height": 600,
+    "position": "center",
+    "min_width": 400,
+    "min_height": 200,
+    "icon": "wesee_1024.png",
+    "show": true,
+    "resizable": false
+  },
+  "webkit": {
+    "plugin": false
+  }
+}

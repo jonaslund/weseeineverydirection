@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    body, html {margin: 0; padding: 0; overflow: hidden;}
+    body {font: 21px/1 sans-serif; color: #000; height: 100%; }
+    img {height: 80px;  position: absolute; right: 20px; bottom: 20px;}
+    h1 {position: absolute; top: 50px; left: 50px; z-index: 200; width: 100%; font-size: 80px;}  
+  </style>
+</head>
+<body>
+  <h1>Bummer. Page Not Found. 404</h1>
+  <img src="wesee_1024.png" />  
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="hotkeys.js"></script>
+  <script>  
+    $(document).bind('keydown', 'ctrl+l', function() {
+      cmdL();
+    });
+    $(document).bind('keydown', 'cmd+l', function() {
+      cmdL();
+    });
+    function cmdL() {
+      $("#urlbar").focus().select();
+    }
+  </script>
+</body>
+<html>

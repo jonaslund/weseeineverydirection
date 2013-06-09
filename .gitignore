@@ -1,0 +1,4 @@
+.DS_Store
+macClient/node_modules/
+winClient/node_modules/
+server/node_modules/

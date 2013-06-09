@@ -1,0 +1,78 @@
+<!doctype html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>We See In Every Direction, 2013, Jonas Lund</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=980">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/files/jquery172.min.js"%3E%3C/script%3E'))</script>
+  <script src="http://ineverydirection.net:443/socket.io/socket.io.js"></script>
+  <script src="http://ineverydirection.net/js/scripts.js"></script>
+
+  <meta property="og:title" content="We See In Every Direction" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://ineverydirection.net" />
+  <meta property="og:image" content="http://ineverydirection.net/img/wesee_1024.png" />
+
+  <!-- 
+    We See In Every Direction
+    Jonas Lund, 2013 
+  -->
+</head>
+<body>
+
+    <header id="main-header" class="cf">
+      <h1 class="cf"><img src="/img/weseelogo4.png" /></h1>
+    </header>
+    
+    <div id="splash" class="center">
+      <h1>A Synchronized Shared Web Browser</h1>    
+      
+      <div id="download">
+        <% if(type.Mac) { %>
+        <a href="http://wesee.s3.amazonaws.com/WeSee.app.zip" id="downloadButton">Download</a>
+        <h3>For Mac OS X 10.7.5 or later</h3>
+
+        <% } else if (type.Windows) { %>
+          <a href="http://wesee.s3.amazonaws.com/WeSeeWin.zip" id="downloadButton">Download</a>
+          <h3>For Windows XP or later</h3>
+
+        <% } else if (type.Mobile || type.webOS || type.Android || type.iOS || type.iPhone || type.iPad) { %>          
+          <h3>Dang, Please use your real computer and come back. (Only supported on Mac OS X, Windows or Linux 32/64bit)</h3>
+
+        <% } else { %>
+          <a href="http://wesee.s3.amazonaws.com/WeSee32bit.tar.gz" id="downloadButton">Download 32bit</a><a href="http://wesee.s3.amazonaws.com/WeSee64bit.tar.gz" id="downloadButton">Download 64bit</a>
+          <h3>For Linux 32bit or 64bit</h3>
+
+        <% } %>
+      </div>
+      
+      <img id="weesee" src="/img/weesee2.gif" id="weesee"/>
+    </div>    
+
+    <hr />
+    
+    <div id="about" >
+        <h2>About</h2>
+        <p>We See In Every Direction (2013) is a Web browser for collaborative, synchronized surfing by Swedish artist <a href="http://jonaslund.biz">Jonas Lund</a>. Browsing the Internet is typically an intimate and personal experience for just one individual, but in We See, users traverse online information streams in a collective surfing environment. Users can type, click and change URLs in real time together; they can jockey for control of the browser – akin to fighting for the TV remote – or choose to sit back and let their friends take care of the surfing. Like many of Lund’s previous online works, the piece opens up the oft-private, walled gardens of the Internet.      
+        </p>
+    </div>
+
+    <hr />
+
+   <div id="urls" class="cf clear">
+      <h2>Recently Visited Urls</h2>
+      <ol>
+    <% for(var i=0; i<res.length; i++) {%>
+        <li><a href="<%= res[i].url %>" ><%= res[i].url %></a></li>
+    <% } %>
+      </ol>
+    </div>
+
+    <hr />
+    
+<% include _footer %>

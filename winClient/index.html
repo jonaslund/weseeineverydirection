@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>We See (In Every Direction), Jonas Lund, 2013</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id="loading">
+    <h1>We See</h1>
+    <img src="wesee_1024.png" />
+    <h2 id="status">Connecting...</h2>
+  </div>
+
+  <div id="cursors"> 
+  </div>
+
+  <div id="urltop">
+    <span id="count">1</span>
+    <input  type="text" id="urlbar" value="loading In Every Direction..."/>
+    <img id="loadicn" src="loading.gif" title="Loading"/>
+  </div>
+
+  <div id="message" class="hidden">
+    <div id="messagecontent">
+    </div>
+    <a id="closemessage" href="">&times;</a>
+  </div>
+
+  <iframe id="iframe" src="" frameborder="0" nwfaketop nwdisable scrolling="yes" sandbox="allow-scripts allow-forms"></iframe>
+  
+  <script src="jquery.min.js"></script>
+  <script src="http://ineverydirection.net:443/socket.io/socket.io.js"></script>
+  <script src="hotkeys.js"></script>
+  <script src="scripts.js"></script>
+
+</body>
+</html>
